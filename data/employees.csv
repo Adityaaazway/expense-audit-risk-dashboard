@@ -1,0 +1,51 @@
+employee_id,employee_name,department,designation,manager_name,city,join_date
+1,Vivaan Atwal,Sales,Executive,Meghana Chanda,Noida,12-10-2023
+2,Jagrati Khalsa,Finance,Analyst,Pavani Pai,Gurgaon,21-06-2025
+3,Azaan Jayaraman,Sales,Executive,Timothy Dugar,Bengaluru,15-11-2025
+4,Yadavi Ramachandran,Operations,Executive,Ranbir Gole,Delhi,03-05-2025
+5,Anthony Dani,Sales,Analyst,Qabil Acharya,Gurgaon,27-09-2024
+6,Aadhya Bhatti,Admin,Executive,Harita Tata,Bengaluru,25-09-2023
+7,Hardik Wali,Finance,Manager,Mekhala Bir,Gurgaon,02-09-2025
+8,Azaan Dayal,Operations,Senior Analyst,Omkaar Subramaniam,Delhi,30-08-2025
+9,Leela Korpal,Finance,Manager,Bhavika Tripathi,Noida,06-06-2023
+10,Dev Chana,HR,Analyst,Bimala Bhatt,Gurgaon,11-10-2025
+11,Lucky Atwal,HR,Executive,Rehaan Brahmbhatt,Delhi,23-05-2023
+12,Charvi Deol,Operations,Executive,Devika Baria,Noida,12-11-2023
+13,Logan Oza,HR,Senior Analyst,Faras Seshadri,Delhi,21-01-2025
+14,Ekavir Krishna,Operations,Executive,Anirudh Suri,Mumbai,07-05-2024
+15,Meghana Dhingra,Sales,Senior Analyst,Isha Chadha,Bengaluru,10-07-2024
+16,Amruta Muni,HR,Analyst,Sara Loyal,Delhi,05-06-2024
+17,Mekhala Sridhar,Sales,Analyst,Nihal Jha,Noida,09-09-2024
+18,Adweta Brar,Sales,Analyst,Indira Babu,Delhi,17-08-2024
+19,Girindra Savant,Operations,Senior Analyst,Maya Gokhale,Mumbai,04-01-2025
+20,Charles Sanghvi,HR,Analyst,Rushil Sagar,Noida,10-03-2024
+21,Udant Hora,HR,Analyst,Samesh Ganesh,Noida,13-03-2026
+22,Radhika Anne,Sales,Analyst,Dev Chowdhury,Bengaluru,02-07-2023
+23,Owen Suresh,Finance,Analyst,Frederick Ganesh,Mumbai,03-10-2024
+24,Vaishnavi Ramakrishnan,Operations,Senior Analyst,Sai Gill,Bengaluru,20-03-2024
+25,Liam Dhawan,Finance,Senior Analyst,Frederick Sabharwal,Delhi,11-10-2023
+26,Varsha Kala,Finance,Executive,Yashasvi Peri,Noida,10-12-2023
+27,Lavanya Johal,Operations,Senior Analyst,Ekapad Sarma,Delhi,07-06-2025
+28,Ekiya Pandit,Finance,Senior Analyst,Isaiah Rajan,Gurgaon,23-10-2025
+29,Wakeeta Chokshi,Operations,Manager,Dipta Chacko,Mumbai,04-09-2025
+30,Ekiya Kanda,Finance,Senior Analyst,Samar Menon,Gurgaon,06-05-2024
+31,Vyanjana Sachar,Finance,Senior Analyst,Girindra Hans,Bengaluru,14-02-2024
+32,Watika Sarma,Operations,Manager,Samesh Wason,Noida,19-05-2025
+33,Dhriti Lall,Finance,Analyst,Triya Nanda,Bengaluru,15-02-2026
+34,Varsha Jani,Operations,Executive,Dayamai Bhatt,Delhi,11-11-2025
+35,Jai Dar,Sales,Analyst,Idika Zachariah,Gurgaon,23-10-2024
+36,Pratyush Dey,Operations,Executive,Varenya Dhar,Mumbai,20-07-2024
+37,Jeevika Bora,Operations,Manager,Anika Bandi,Bengaluru,01-11-2025
+38,Raksha Gokhale,HR,Executive,Irya Ravi,Delhi,03-12-2023
+39,Divya Som,Admin,Senior Analyst,Warjas Gopal,Noida,03-05-2024
+40,Quincy Sama,Sales,Senior Analyst,Ati Patla,Mumbai,30-04-2025
+41,Samarth Nath,Finance,Manager,Nitara Char,Delhi,31-08-2024
+42,Imaran Grewal,HR,Analyst,Tamanna Dalal,Bengaluru,03-02-2026
+43,Urvi Doctor,Sales,Senior Analyst,Victor Bath,Bengaluru,12-12-2025
+44,Oliver D’Alia,Admin,Analyst,Gaurav Walia,Gurgaon,11-01-2025
+45,Samuel Agate,HR,Analyst,Meera Cheema,Bengaluru,20-07-2025
+46,Eiravati Balakrishnan,Admin,Executive,Darsh Sampath,Bengaluru,19-02-2024
+47,Yashodhara Sibal,HR,Manager,Aarna Krishnan,Delhi,29-04-2025
+48,Amaira Raj,Sales,Senior Analyst,Saanvi Lata,Noida,24-03-2026
+49,Ucchal Deshmukh,Finance,Executive,Sai Brar,Gurgaon,13-07-2023
+50,Ojasvi Sankaran,Admin,Executive,Chaitanya Dugal,Delhi,28-03-2024

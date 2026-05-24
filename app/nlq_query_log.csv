@@ -1,0 +1,243 @@
+timestamp,question,sql_query,status,error_message
+24-05-2026 14:41,Show weekend expenses above 5000. ,"SELECT
+  expense_id,
+  employee_name,
+  department,
+  vendor_name,
+  expense_date,
+  amount,
+  day_of_week
+FROM audit_app.vw_weekend_expenses
+WHERE
+  amount > 5000;",success,
+2026-05-24 15:42:24,List top 10 vendors by total amount,"SELECT
+  vendor_name,
+  SUM(amount) AS total_amount_spent
+FROM audit_app.vw_employee_expense_detail
+GROUP BY
+  vendor_name
+ORDER BY
+  total_amount_spent DESC
+LIMIT 10",success,
+2026-05-24 17:19:36,Show weekend expenses above 5000,"SELECT
+  expense_id,
+  employee_id,
+  employee_name,
+  department,
+  vendor_id,
+  vendor_name,
+  category_id,
+  category_name,
+  expense_date,
+  amount,
+  description,
+  day_of_week,
+  risk_reason
+FROM audit_app.vw_weekend_expenses
+WHERE
+  amount > 5000;",success,
+2026-05-24 17:21:32,"How many employees have expenses over 10,000 in airport travel? ","SELECT COUNT(DISTINCT employee_id)
+FROM audit_app.vw_employee_expense_detail
+WHERE amount > 10000
+  AND category_name = 'Airport Travel'",success,
+2026-05-24 17:21:54,How many employees have expenses over 2000 in airport travel? ,,failed,"429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 5.383083867s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}"
+2026-05-24 17:22:24,How many employees have expenses over 2000  airport traivel? ,,failed,"429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 35.512119497s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+2026-05-24 17:24:55,How many employees have expenses over 2000  airport traivel? ,,failed,"429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 4.635009027s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+2026-05-24 17:27:42,Show expenses for a specific employee,,failed,"429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 17.430605707s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}"
+2026-05-24 17:33:22,Show weekend expenses above 5000,,failed,"404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+2026-05-24 17:36:30,Show weekend expenses above 5000,,failed,"429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 29.318978697s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+2026-05-24 17:43:40,Show weekend expenses above 5000,"SELECT expense_id, employee_id, employee_name, department, vendor_id, vendor_name, category_id, category_name, expense_date, amount, description, day_of_week, risk_reason FROM audit_app.vw_weekend_expenses WHERE amount > 5000",success,
+2026-05-24 17:44:32,"Find the employees who have expenses over 2,000 in airport travel. ","SELECT DISTINCT employee_name
+FROM audit_app.vw_employee_expense_detail
+WHERE amount > 2000
+  AND category_name = 'Airport Travel';",success,
+2026-05-24 17:46:20,"name of employees who have expenses over 2,000 in airport travel. ","SELECT
+  employee_name
+FROM audit_app.vw_employee_expense_detail
+WHERE
+  amount > 2000 AND category_name = 'Airport Travel'
+GROUP BY
+  employee_name;",success,
+2026-05-24 17:49:41,"Show employee names and expense amounts for all records where the amount is greater than 2000 and the category or expense type contains airport or travel. Use partial text matching, not exact match.","SELECT
+  employee_name,
+  amount
+FROM
+  audit_app.vw_employee_expense_detail
+WHERE
+  amount > 2000
+  AND (category_name ILIKE '%airport%' OR category_name ILIKE '%travel%');",success,
+2026-05-24 17:50:31,"Show employee names and expense amounts for all records where the amount is greater than 2000 and the category or expense type contains airport dinner. Use partial text matching, not exact match.","SELECT employee_name, amount
+FROM audit_app.vw_employee_expense_detail
+WHERE amount > 2000
+  AND category_name ILIKE '%airport dinner%';",success,
+2026-05-24 17:52:46,"Show employee_name, amount, category_name, and expense_type for expenses above 2000. Do not filter by airport travel first. Return the top rows so I can inspect the actual category values related to travel.","SELECT employee_name, amount, category_name FROM audit_app.vw_employee_expense_detail WHERE amount > 2000 ORDER BY amount DESC LIMIT 10",success,
+2026-05-24 17:54:18,"Show employee_name, amount, category_name, and expense_type for expenses above 2000. ","SELECT
+  employee_name,
+  amount,
+  category_name
+FROM
+  audit_app.vw_employee_expense_detail
+WHERE
+  amount > 2000;",success,
+2026-05-24 17:55:06,"Show employee_name, amount, category_name, and expense_type for expenses above 2000.  in flight ","SELECT employee_name, amount, category_name, category_name AS expense_type FROM audit_app.vw_employee_expense_detail WHERE amount > 2000",success,
+2026-05-24 17:55:41,"Show employee_name, amount, category_name, and expense_type for expenses above 2000  in flight category","SELECT
+  employee_name,
+  amount,
+  category_name
+FROM
+  audit_app.vw_employee_expense_detail
+WHERE
+  amount > 2000 AND category_name = 'Flight'",success,
+2026-05-24 22:54:45,Show expenses for a specific employee,"SELECT
+  expense_id,
+  employee_id,
+  employee_name,
+  department,
+  vendor_id,
+  vendor_name,
+  category_id,
+  category_name,
+  expense_date,
+  amount,
+  description
+FROM
+  audit_app.vw_employee_expense_detail
+WHERE
+  employee_id = 'your_employee_id_here' -- Replace with the actual employee ID
+;",failed,"(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: ""your_employee_id_here""
+LINE 16:   employee_id = 'your_employee_id_here' -- Replace with the ...
+                         ^
+
+[SQL: SELECT
+  expense_id,
+  employee_id,
+  employee_name,
+  department,
+  vendor_id,
+  vendor_name,
+  category_id,
+  category_name,
+  expense_date,
+  amount,
+  description
+FROM
+  audit_app.vw_employee_expense_detail
+WHERE
+  employee_id = 'your_employee_id_here' -- Replace with the actual employee ID
+;]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)"
+2026-05-24 22:55:44,Show expenses for hardik,"SELECT
+  expense_id,
+  employee_id,
+  employee_name,
+  department,
+  vendor_id,
+  vendor_name,
+  category_id,
+  category_name,
+  expense_date,
+  amount,
+  description
+FROM
+  audit_app.vw_employee_expense_detail
+WHERE
+  employee_name = 'hardik';",success,
+2026-05-24 22:55:57,List top 10 vendors by total amount,"SELECT
+  vendor_name,
+  SUM(amount) AS total_amount_spent
+FROM audit_app.vw_employee_expense_detail
+GROUP BY
+  vendor_name
+ORDER BY
+  total_amount_spent DESC
+LIMIT 10;",success,
+2026-05-24 22:57:21,"Show me the employee IDs and names from expense for flight 
+","SELECT DISTINCT employee_id, employee_name FROM audit_app.vw_employee_expense_detail WHERE category_name = 'Flight'",success,
+2026-05-24 22:57:53,"Show me the employee IDs and names , their expense and expense category from expense for flight 
+","SELECT
+  employee_id,
+  employee_name,
+  amount AS expense_amount,
+  category_name
+FROM audit_app.vw_employee_expense_detail
+WHERE
+  category_name ILIKE '%flight%';",success,
+2026-05-24 22:58:32,Show weekend expenses above 5000,"SELECT expense_id, employee_id, employee_name, department, vendor_id, vendor_name, category_id, category_name, expense_date, amount, description, day_of_week, risk_reason FROM audit_app.vw_weekend_expenses WHERE amount > 5000",success,
+2026-05-24 23:03:50,Show weekend expenses above 5000,"SELECT expense_id, employee_id, employee_name, department, vendor_id, vendor_name, category_id, category_name, expense_date, amount, description, day_of_week, risk_reason FROM audit_app.vw_weekend_expenses WHERE amount > 5000;",success,
+2026-05-24 23:23:19,Show hotel expenses above 10000,"SELECT
+  expense_id,
+  employee_name,
+  department,
+  vendor_name,
+  category_name,
+  expense_date,
+  amount,
+  description
+FROM audit_app.vw_employee_expense_detail
+WHERE
+  amount > 10000 AND (
+    category_name ILIKE '%Hotel%' OR
+    category_name ILIKE '%Lodging%' OR
+    category_name ILIKE '%Accommodation%' OR
+    category_name ILIKE '%Stay%' OR
+    category_name ILIKE '%Room Booking%' OR
+    description ILIKE '%Hotel%' OR
+    description ILIKE '%Lodging%' OR
+    description ILIKE '%Accommodation%' OR
+    description ILIKE '%Stay%' OR
+    description ILIKE '%Room Booking%'
+  );",success,
+2026-05-25 00:22:19,Summarize total amount by risk level,"SELECT
+    risk_reason,
+    SUM(amount) AS total_amount
+FROM
+    audit_app.vw_duplicate_expense_risk
+GROUP BY
+    risk_reason
+ORDER BY
+    total_amount DESC;",success,
+2026-05-25 00:22:35,Show weekend expenses above 5000,"SELECT
+  expense_id,
+  employee_id,
+  employee_name,
+  department,
+  vendor_id,
+  vendor_name,
+  category_id,
+  category_name,
+  expense_date,
+  amount,
+  description,
+  day_of_week,
+  risk_reason
+FROM audit_app.vw_weekend_expenses
+WHERE
+  amount > 5000;",success,
+2026-05-25 00:27:17,Show weekend expenses above 5000,"SELECT
+  expense_id,
+  employee_id,
+  employee_name,
+  department,
+  vendor_id,
+  vendor_name,
+  category_id,
+  category_name,
+  expense_date,
+  amount,
+  description,
+  day_of_week,
+  risk_reason
+FROM
+  audit_app.vw_weekend_expenses
+WHERE
+  amount > 5000;",success,
+2026-05-25 00:38:37,Show employee name weekend expenses above 5000,"SELECT
+  employee_name,
+  SUM(amount) AS total_weekend_expense
+FROM audit_app.vw_weekend_expenses
+WHERE
+  amount > 5000
+GROUP BY
+  employee_name
+ORDER BY
+  total_weekend_expense DESC;",success,

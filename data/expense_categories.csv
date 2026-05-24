@@ -1,0 +1,6 @@
+category_id,category_name,receipt_required,weekend_allowed,max_limit
+1,Hotel,TRUE,FALSE,10000
+2,Taxi,TRUE,TRUE,3000
+3,Meals,TRUE,FALSE,2500
+4,Flight,TRUE,TRUE,20000
+5,Office Supplies,TRUE,FALSE,5000

@@ -1,0 +1,9 @@
+vendor_id,vendor_name,vendor_type,city,risk_tag
+1,Taj Hotel,Hotel,Delhi,Normal
+2,Uber,Cab,Gurgaon,Normal
+3,Ola,Cab,Delhi,Normal
+4,IndiGo,Airline,Delhi,Normal
+5,Air India,Airline,Mumbai,Normal
+6,Airport Diner,Restaurant,Delhi,High Risk
+7,ITC Hotel,Hotel,Mumbai,Normal
+8,Staples India,Office Supplies,Noida,Normal

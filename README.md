@@ -167,12 +167,9 @@ expense-audit-risk-dashboard/
 ├── .gitignore
 └── run_app.bat
 ```
-
 ## Visual Walkthrough
 
 ### 1. Hero
-
-Add the main dashboard hero screenshot here.
 
 ![Hero](images/hero.png)
 
@@ -182,13 +179,9 @@ Add the main dashboard hero screenshot here.
 
 ### 3. Risk Overview
 
-Add the risk overview dashboard section here.
-
 ![Risk Overview](images/Riskoverview.png)
 
 ### 4. Weekend Expense Review
-
-Add the weekend expense review screenshot here.
 
 ![Weekend Expense Review](images/Weekend_expense_review.png)
 

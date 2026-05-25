@@ -369,30 +369,24 @@ with tab3:
 # =========================================================
 schema_df = pd.read_csv(schema_path)
 
-    grouped_schema = (
-        schema_df.groupby(["table_schema", "table_name"])["column_name"]
-        .apply(list)
-        .reset_index()
-    )
+grouped_schema = (
+    schema_df.groupby(["table_schema", "table_name"])["column_name"]
+    .apply(list)
+    .reset_index()
+)
 
-    schema_text_parts = []
-    for _, row in grouped_schema.iterrows():
-        full_view_name = f"{row['table_schema']}.{row['table_name']}"
-        columns = "\\n".join([f"   - {col}" for col in row["column_name"]])
-        schema_text_parts.append(f"{full_view_name}\\n{columns}")
+schema_text_parts = []
+for _, row in grouped_schema.iterrows():
+    full_view_name = f"{row['table_schema']}.{row['table_name']}"
+    columns = "\\n".join([f"   - {col}" for col in row["column_name"]])
+    schema_text_parts.append(f"{full_view_name}\\n{columns}")
 
-    schema_context_dynamic = "\\n\\n".join(schema_text_parts)
+schema_context_dynamic = "\\n\\n".join(schema_text_parts)
 
-    allowed_views = {
-        f"{row['table_schema']}.{row['table_name']}".lower()
-        for _, row in grouped_schema.iterrows()
-    }
-else:
-    schema_df = pd.DataFrame()
-    schema_context_dynamic = ""
-    allowed_views = set()
-
-
+allowed_views = {
+    f"{row['table_schema']}.{row['table_name']}".lower()
+    for _, row in grouped_schema.iterrows()
+}
 # =========================================================
 # QUERY HISTORY LOAD
 # =========================================================

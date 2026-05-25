@@ -6,7 +6,12 @@ import pandas as pd
 import plotly.express as px
 from google import genai
 
+from pathlib import Path
+import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parent
+schema_path = BASE_DIR / "audit_app_schema.csv"
+schema_df = pd.read_csv(schema_path)
 # =========================================================
 # APP CONFIG
 # =========================================================

@@ -174,65 +174,46 @@ expense-audit-risk-dashboard/
 
 Add the main dashboard hero screenshot here.
 
-```md
 ![Hero](images/hero.png)
-```
 
 ### 2. Natural Language Querying
 
-Add the LLM / NLQ interface screenshot directly after the hero so the reader quickly understands the differentiating feature of the project.
-
-```md
 ![Natural Language Querying](images/LLM.png)
-```
 
 ### 3. Risk Overview
 
 Add the risk overview dashboard section here.
 
-```md
 ![Risk Overview](images/Riskoverview.png)
-```
 
 ### 4. Weekend Expense Review
 
 Add the weekend expense review screenshot here.
 
-```md
 ![Weekend Expense Review](images/Weekend_expense_review.png)
-```
 
 ### 5. Top Weekend Spend
 
-```md
 ![Top Weekend Spend](images/Top_Weekend_Spend.png)
-```
 
 ### 6. Weekend Expense Trend
 
-```md
 ![Weekend Expense Trend](images/Weekend_Expense_Trend.png)
-```
 
 ### 7. Top Weekend Vendors
 
-```md
 ![Top Weekend Vendors](images/Top_Weekend_Vendors.png)
-```
 
 ### 8. Power BI Dashboard Views
 
-```md
 ![Power BI Dashboard 1](images/PowerBI_1.png)
+
 ![Power BI Dashboard 2](images/PowerBI_2.png)
+
 ![Power BI Dashboard 3](images/PowerBI_3.png)
-```
 
 ### 9. PostgreSQL / pgAdmin Backend Layer
 
-Place the pgAdmin screenshot after the Power BI section so the README flows from user-facing dashboards to backend infrastructure.
-
-```md
 ![pgAdmin Database Layer](images/Pg_admin.png)
 ```
 

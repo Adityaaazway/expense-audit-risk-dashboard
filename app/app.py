@@ -367,10 +367,7 @@ with tab3:
 # =========================================================
 # SCHEMA SECTION
 # =========================================================
-schema_file = "audit_app_schema.csv"
-
-if os.path.exists(schema_file):
-    schema_df = pd.read_csv(schema_file)
+schema_df = pd.read_csv(schema_path)
 
     grouped_schema = (
         schema_df.groupby(["table_schema", "table_name"])["column_name"]

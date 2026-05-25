@@ -279,9 +279,7 @@ For public portfolio sharing, the intended deployment flow is:
 
 Add your deployed app link here:
 
-```md
-[Open the live Streamlit app](PASTE_YOUR_DEPLOYED_APP_LINK_HERE)
-```
+Live app: [Open the live Streamlit app](https://expense-audit-risk-dashboard.streamlit.app/)
 
 ## Current Limitations
 

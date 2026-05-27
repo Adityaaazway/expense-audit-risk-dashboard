@@ -82,26 +82,25 @@ def log_nlq_activity(question, sql_query, status, error_message=""):
         updated_log.to_csv(log_file, index=False)
     else:
         log_row.to_csv(log_file, index=False)
-import streamlit as st
-import pandas as pd
 from pathlib import Path
-
-st.set_page_config(page_title="Expense Audit Risk Dashboard", layout="wide")
+import os
+import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent
-SCHEMA_FILE = BASE_DIR / "audit_app_schema.csv"
+ROOT_DIR = Path.cwd()
+SCHEMA_FILE_1 = BASE_DIR / "audit_app_schema.csv"
+SCHEMA_FILE_2 = ROOT_DIR / "audit_app_schema.csv"
+SCHEMA_FILE_3 = ROOT_DIR / "app" / "audit_app_schema.csv"
 
-st.write("Schema path:", SCHEMA_FILE)
-st.write("Schema exists:", SCHEMA_FILE.exists())
+st.write("Current file:", __file__)
+st.write("Base dir:", BASE_DIR)
+st.write("Current working dir:", ROOT_DIR)
+st.write("Base dir files:", [p.name for p in BASE_DIR.iterdir()])
+st.write("Root dir files:", [p.name for p in ROOT_DIR.iterdir()])
+st.write("Schema path 1:", SCHEMA_FILE_1, SCHEMA_FILE_1.exists())
+st.write("Schema path 2:", SCHEMA_FILE_2, SCHEMA_FILE_2.exists())
+st.write("Schema path 3:", SCHEMA_FILE_3, SCHEMA_FILE_3.exists())
 
-if SCHEMA_FILE.exists():
-    schema_df = pd.read_csv(SCHEMA_FILE)
-else:
-    schema_df = None
-    st.warning("Schema file not found. NLQ-to-SQL is disabled until audit_app_schema.csv is available.")
-
-# Hero section starts here
-st.markdown("## Expense Audit Risk Dashboard")
 # =========================================================
 # HEADER SECTION
 # =========================================================

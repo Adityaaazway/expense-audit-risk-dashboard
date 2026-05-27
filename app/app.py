@@ -11,13 +11,36 @@ import pandas as pd
 import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent
-schema_path = BASE_DIR / "audit_app_schema.csv"
+ROOT_DIR = Path.cwd()
 
-if schema_path.exists():
+candidate_paths = [
+    BASE_DIR / "audit_app_schema.csv",
+    ROOT_DIR / "audit_app_schema.csv",
+    ROOT_DIR / "app" / "audit_app_schema.csv",
+]
+
+schema_path = next((p for p in candidate_paths if p.exists()), None)
+
+with st.expander("Schema debug", expanded=False):
+    st.write("Running file:", __file__)
+    st.write("Base dir:", str(BASE_DIR))
+    st.write("Root dir:", str(ROOT_DIR))
+    st.write("Candidate paths:", [str(p) for p in candidate_paths])
+    st.write("Exists flags:", [p.exists() for p in candidate_paths])
+    try:
+        st.write("Base dir files:", [p.name for p in BASE_DIR.iterdir()])
+    except Exception as e:
+        st.write("Base dir files error:", str(e))
+    try:
+        st.write("Root dir files:", [p.name for p in ROOT_DIR.iterdir()])
+    except Exception as e:
+        st.write("Root dir files error:", str(e))
+
+if schema_path is not None:
     schema_df = pd.read_csv(schema_path)
 else:
     schema_df = None
-    st.warning("Schema file not found. NLQ-to-SQL is disabled until audit_app_schema.csv is available.")=================
+    st.warning("Schema file not found. NLQ-to-SQL is disabled until audit_app_schema.csv is available.")
 # APP CONFIG
 # =========================================================
 st.set_page_config(page_title="Expense Audit Monitor", layout="wide")

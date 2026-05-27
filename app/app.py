@@ -11,26 +11,13 @@ import pandas as pd
 import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent
-ROOT_DIR = Path.cwd()
+schema_path = BASE_DIR / "audit_app_schema.csv"
 
-candidate_paths = [
-    BASE_DIR / "audit_app_schema.csv",
-    ROOT_DIR / "audit_app_schema.csv",
-    ROOT_DIR / "app" / "audit_app_schema.csv",
-]
-
-schema_path = next((p for p in candidate_paths if p.exists()), None)
-
-st.write("Running file:", __file__)
-st.write("Candidate paths:", [str(p) for p in candidate_paths])
-st.write("Exists flags:", [p.exists() for p in candidate_paths])
-
-if schema_path is not None:
+if schema_path.exists():
     schema_df = pd.read_csv(schema_path)
-    st.success(f"Schema loaded from: {schema_path}")
 else:
     schema_df = None
-    st.error("Schema file not found in any expected location.")
+    st.warning("Schema file not found. NLQ-to-SQL is disabled until audit_app_schema.csv is available.")
 
 # APP CONFIG
 # =========================================================

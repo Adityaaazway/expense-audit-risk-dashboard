@@ -82,11 +82,14 @@ def log_nlq_activity(question, sql_query, status, error_message=""):
         updated_log.to_csv(log_file, index=False)
     else:
         log_row.to_csv(log_file, index=False)
-from pathlib import Path
-import pandas as pd
 import streamlit as st
+import pandas as pd
+from pathlib import Path
 
-SCHEMA_FILE = Path(__file__).resolve().parent / "audit_app_schema.csv"
+st.set_page_config(page_title="Expense Audit Risk Dashboard", layout="wide")
+
+BASE_DIR = Path(__file__).resolve().parent
+SCHEMA_FILE = BASE_DIR / "audit_app_schema.csv"
 
 st.write("Schema path:", SCHEMA_FILE)
 st.write("Schema exists:", SCHEMA_FILE.exists())
@@ -97,6 +100,8 @@ else:
     schema_df = None
     st.warning("Schema file not found. NLQ-to-SQL is disabled until audit_app_schema.csv is available.")
 
+# Hero section starts here
+st.markdown("## Expense Audit Risk Dashboard")
 # =========================================================
 # HEADER SECTION
 # =========================================================

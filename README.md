@@ -2,6 +2,8 @@
 
 Internal audit expense risk dashboard built with PostgreSQL, Power BI, Streamlit, and Gemini-powered natural language querying.
 
+Live app: [Open the live Streamlit app](https://expense-audit-risk-dashboard.streamlit.app/)
+
 ## Tools
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -219,7 +221,7 @@ expense-audit-risk-dashboard/
 ### 9. PostgreSQL / pgAdmin Backend Layer
 
 ![pgAdmin Database Layer](images/Pg_admin.png)
-```
+``
 
 ## How the Components Connect
 
